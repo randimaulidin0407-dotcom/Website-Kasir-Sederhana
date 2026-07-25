@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Absensi Karyawan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="menu">
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="produk.html">📦 Produk</a>
+    <a href="kasir.html">🛒 Kasir</a>
+    <a href="absensi.html">👥 Absensi</a>
+    <a href="settlement.html">💰 Settlement</a>
+    <a href="laporan.html">📊 Laporan</a>
+    <a href="index.html">Logout</a>
+</div>
+
+<h1 align="center">Absensi Karyawan</h1>
+
+<div class="card">
+
+<h3>Input Absensi</h3>
+
+<label>Nama Karyawan</label>
+<input type="text" id="namaKaryawan">
+
+<label>Jabatan</label>
+
+<select id="jabatan">
+    <option>Kasir</option>
+    <option>Barista</option>
+    <option>Kitchen</option>
+    <option>Waiter</option>
+</select>
+
+<label>Status Kehadiran</label>
+
+<select id="status">
+    <option>Hadir</option>
+    <option>Izin</option>
+    <option>Sakit</option>
+    <option>Alpha</option>
+</select>
+
+<button onclick="absen()">
+Simpan Absensi
+</button>
+
+<button
+style="background:red"
+onclick="resetAbsensi()">
+Reset Riwayat
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Riwayat Absensi</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>Nama</th>
+
+<th>Jabatan</th>
+
+<th>Tanggal</th>
+
+<th>Jam</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabelAbsensi">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

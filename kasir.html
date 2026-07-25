@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Kasir</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="menu">
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="produk.html">📦 Produk</a>
+
+<a href="kasir.html">🛒 Kasir</a>
+
+<a href="absensi.html">👥 Absensi</a>
+
+<a href="settlement.html">💰 Settlement</a>
+
+<a href="laporan.html">📊 Laporan</a>
+
+<a href="index.html">Logout</a>
+
+</div>
+
+
+
+<h1 align="center">
+Transaksi Kasir
+</h1>
+
+
+
+
+<div class="card">
+
+
+<h3>Data Pelanggan</h3>
+
+<label>Nama Pelanggan</label>
+
+<input
+type="text"
+id="namaPelanggan"
+placeholder="Masukkan nama pelanggan">
+
+<hr>
+
+<h3>Pilih Produk</h3>
+
+
+<select id="pilihProduk">
+
+</select>
+
+
+
+<input 
+type="number" 
+id="jumlahBeli"
+placeholder="Jumlah beli">
+
+
+
+<button onclick="tambahKeranjang()">
+
+Tambah
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+
+<h3>Keranjang Belanja</h3>
+
+
+<table border="1" width="100%" cellpadding="10">
+
+
+<tr>
+
+<th>Produk</th>
+
+<th>Harga</th>
+
+<th>Jumlah</th>
+
+<th>Total</th>
+
+</tr>
+
+
+<tbody id="keranjang">
+
+</tbody>
+
+
+</table>
+
+
+
+<h3>
+
+Total :
+Rp <span id="totalHarga">0</span>
+
+</h3>
+
+
+
+Diskon (%)
+
+<input 
+type="number"
+id="diskon"
+value="0"
+oninput="hitungTotal()">
+
+
+
+<h3>
+
+Bayar
+
+<input 
+type="number"
+id="bayar"
+oninput="hitungTotal()">
+
+
+</h3>
+
+
+
+<h3>
+
+Kembalian :
+
+Rp <span id="kembalian">0</span>
+
+</h3>
+
+
+
+<button onclick="simpanTransaksi()">
+
+Simpan Transaksi
+
+</button>
+
+
+
+<button onclick="cetakStruk()">
+
+Cetak Struk
+
+</button>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<title>Settlement Kasir</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="menu">
+
+<a href="dashboard.html">🏠 Dashboard</a>
+<a href="produk.html">📦 Produk</a>
+<a href="kasir.html">🛒 Kasir</a>
+<a href="absensi.html">👥 Absensi</a>
+<a href="settlement.html">💰 Settlement</a>
+<a href="laporan.html">📊 Laporan</a>
+<a href="index.html">Logout</a>
+
+</div>
+
+<h1 align="center">Settlement Kasir</h1>
+
+<div class="card">
+
+<h3>Buka Shift</h3>
+
+<label>Nama Kasir</label>
+
+<input type="text" id="kasir">
+
+<label>Modal Awal</label>
+
+<input type="number" id="modal">
+
+<button onclick="bukaShift()">
+
+Buka Shift
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Tutup Shift</h3>
+
+<table>
+
+<tr>
+<td>Kasir</td>
+<td><span id="namaKasir">-</span></td>
+</tr>
+
+<tr>
+<td>Jam Masuk</td>
+<td><span id="jamMasuk">-</span></td>
+</tr>
+
+<tr>
+<td>Jam Keluar</td>
+<td><span id="jamKeluar">-</span></td>
+</tr>
+
+<tr>
+<td>Modal Awal</td>
+<td>Rp <span id="modalAwal">0</span></td>
+</tr>
+
+<tr>
+<td>Total Omset</td>
+<td>Rp <span id="omsetSettlement">0</span></td>
+</tr>
+
+<tr>
+<td>Kas Aktual</td>
+
+<td>
+
+<input type="number" id="kasAktual">
+
+</td>
+
+</tr>
+
+<tr>
+<td>Selisih</td>
+<td>Rp <span id="selisih">0</span></td>
+</tr>
+
+</table>
+
+<br>
+
+<button onclick="hitungSettlement()">
+
+Hitung
+
+</button>
+
+<button onclick="tutupShift()">
+
+Tutup Shift
+
+</button>
+
+<button
+style="background:red"
+onclick="resetSettlement()">
+
+Reset Riwayat
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>Riwayat Settlement</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>Kasir</th>
+
+<th>Tanggal</th>
+
+<th>Omset</th>
+
+<th>Selisih</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabelSettlement">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

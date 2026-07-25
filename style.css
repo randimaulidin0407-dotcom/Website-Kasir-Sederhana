@@ -1,0 +1,187 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* Navbar */
+.menu{
+    background:#1565C0;
+    padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:8px 15px;
+    border-radius:5px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:white;
+    color:#1565C0;
+}
+
+/* Judul */
+h1{
+    color:#1565C0;
+    margin:20px 0;
+}
+
+/* Card */
+.card{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+/* Login */
+.login{
+    width:350px;
+    margin:100px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    text-align:center;
+}
+
+.login h2{
+    color:#1565C0;
+    margin-bottom:20px;
+}
+
+/* Input */
+input,
+select{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+/* Tombol */
+button{
+    background:#1565C0;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.3s;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#0D47A1;
+}
+
+/* Tabel */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th{
+    background:#1565C0;
+    color:white;
+}
+
+table th,
+table td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+table tr:hover{
+    background:#E3F2FD;
+}
+
+/* Ringkasan Dashboard */
+.summary{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    width:90%;
+    margin:auto;
+}
+
+.box{
+    width:30%;
+    background:#2196F3;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    margin-bottom:20px;
+    box-shadow:0 3px 8px rgba(0,0,0,.2);
+}
+
+.box h2{
+    font-size:30px;
+}
+
+.box p{
+    margin-top:10px;
+}
+
+/* Warna berbeda */
+.box:nth-child(2){
+    background:#43A047;
+}
+
+.box:nth-child(3){
+    background:#FB8C00;
+}
+
+@media print{
+
+    .menu,
+    button{
+
+        display:none;
+
+    }
+
+    body{
+
+        background:white;
+
+    }
+
+    .card{
+
+        box-shadow:none;
+        border:1px solid #ccc;
+
+    }
+
+    h1{
+
+        text-align:center;
+
+    }
+
+}

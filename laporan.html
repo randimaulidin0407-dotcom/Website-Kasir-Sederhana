@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Laporan Penjualan</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="menu">
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="produk.html">📦 Produk</a>
+
+<a href="kasir.html">🛒 Kasir</a>
+
+<a href="absensi.html">👥 Absensi</a>
+
+<a href="settlement.html">💰 Settlement</a>
+
+<a href="laporan.html">📊 Laporan</a>
+
+<a href="index.html">Logout</a>
+
+</div>
+
+
+
+<h1 align="center">
+Laporan Penjualan
+</h1>
+
+
+
+
+<div class="card">
+
+
+<h3>Ringkasan Omset</h3>
+
+
+<table border="1" width="100%" cellpadding="10">
+
+
+<tr>
+
+<th>Keterangan</th>
+
+<th>Hasil</th>
+
+</tr>
+
+
+<tr>
+
+<td>Total Transaksi</td>
+
+<td id="totalTransaksi">
+0
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>Total Barang Terjual</td>
+
+<td id="barangTerjual">
+0
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>Total Pendapatan</td>
+
+<td>
+Rp <span id="totalPendapatan">
+0
+</span>
+</td>
+
+</tr>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>Riwayat Transaksi</h3>
+<button onclick="resetOmset()" style="background:red">
+
+Reset Omset
+
+</button>
+
+
+
+<table border="1" width="100%" cellpadding="10">
+
+
+<tr>
+
+<th>No</th>
+
+<th>Tanggal</th>
+
+<th>Nama Pelanggan</th>
+
+<th>Total</th>
+
+</tr>
+
+<div style="margin-bottom:15px;">
+
+    <button onclick="cetakLaporan()">
+        🖨 Cetak Laporan
+    </button>
+
+</div>
+<tbody id="tabelLaporan">
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Data Produk</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="menu">
+
+<a href="dashboard.html">🏠 Dashboard</a>
+
+<a href="produk.html">📦 Produk</a>
+
+<a href="kasir.html">🛒 Kasir</a>
+
+<a href="absensi.html">👥 Absensi</a>
+
+<a href="settlement.html">💰 Settlement</a>
+
+<a href="laporan.html">📊 Laporan</a>
+
+<a href="index.html">Logout</a>
+
+
+</div>
+
+
+
+<h1 align="center">
+Data Produk
+</h1>
+
+
+
+
+<div class="card">
+
+
+<h3>Tambah Produk</h3>
+
+
+<input 
+type="text" 
+id="namaProduk"
+placeholder="Nama Produk">
+
+
+<input 
+type="number" 
+id="hargaProduk"
+placeholder="Harga Produk">
+
+
+<input 
+type="number" 
+id="stokProduk"
+placeholder="Jumlah Stok">
+
+
+<button onclick="tambahProduk()">
+Tambah Produk
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h3>Daftar Produk</h3>
+
+
+<table border="1" width="100%" cellpadding="10">
+
+
+<thead>
+
+<tr>
+
+<th>No</th>
+
+<th>Nama Produk</th>
+
+<th>Harga</th>
+
+<th>Stok</th>
+
+<th>Aksi</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="tabelProduk">
+
+
+</tbody>
+
+
+</table>
+
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
