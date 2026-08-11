@@ -1088,3 +1088,75 @@ alert("Riwayat settlement berhasil dihapus");
 
 tampilkanSettlement();
 tampilkanShiftAktif();
+
+// ======================================
+// SETTLEMENT MASUK KE LAPORAN
+// ======================================
+
+function tampilkanSettlementLaporan(){
+
+    let tabel = document.getElementById("tabelSettlementLaporan");
+
+    if(!tabel) return;
+
+    let data = JSON.parse(
+        localStorage.getItem("settlement")
+    ) || [];
+
+    tabel.innerHTML = "";
+
+    data.forEach(function(item,index){
+
+        let warnaSelisih = "";
+
+        if(item.selisih < 0){
+
+            warnaSelisih = "style='color:red;font-weight:bold'";
+
+        }
+
+        else if(item.selisih > 0){
+
+            warnaSelisih = "style='color:green;font-weight:bold'";
+
+        }
+
+        tabel.innerHTML += `
+
+        <tr>
+
+            <td>${index + 1}</td>
+
+            <td>${item.tanggal}</td>
+
+            <td>${item.kasir}</td>
+
+            <td>${item.jamMasuk}</td>
+
+            <td>${item.jamKeluar}</td>
+
+            <td>
+                Rp ${Number(item.modal).toLocaleString()}
+            </td>
+
+            <td>
+                Rp ${Number(item.omset).toLocaleString()}
+            </td>
+
+            <td>
+                Rp ${Number(item.kasAktual).toLocaleString()}
+            </td>
+
+            <td ${warnaSelisih}>
+                Rp ${Number(item.selisih).toLocaleString()}
+            </td>
+
+        </tr>
+
+        `;
+
+    });
+
+}
+
+tampilkanSettlementLaporan();
