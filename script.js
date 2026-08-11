@@ -1160,3 +1160,9 @@ function tampilkanSettlementLaporan(){
 }
 
 tampilkanSettlementLaporan();
+
+function cetakLaporan(){
+
+    window.print();
+
+}
